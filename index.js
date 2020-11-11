@@ -20,3 +20,28 @@ function rowWeights(array){
   result.push(team1, team2)
   return result
 }
+
+function rowWeights(array){
+  const t1 = array.filter((v,i) => i % 2 ===0).reduce((a,b) => a+b,0)
+  const t2 = array.filter((v,i) => i % 2 !==0).reduce((a,b) => a+b,0)
+
+  return [t1,t2]
+}
+
+
+// Complete the solution so that it reverses all of the words within the string passed in.
+// https://www.codewars.com/kata/51c8991dee245d7ddf00000e/train/javascript
+
+function reverseWords(str){
+  return str.split(' ').reverse().join(' ');
+}
+
+function reverseWords(str){
+  var reverse = [];
+  var words = str.split(" ");
+  for(let i=words.length-1; i>=0; i--){
+    reverse.push(words[i]);
+    
+  }
+  return reverse.join(" ")
+}
